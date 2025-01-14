@@ -5,7 +5,7 @@ import BookingTableOperations from "../features/bookings/BookingTableOperations"
 
 function Bookings() {
   return (
-    <Row>
+    <>
       <Row type="horizontal">
         <Heading as="h1">All bookings</Heading>
         <BookingTableOperations />
@@ -13,7 +13,7 @@ function Bookings() {
       <Row>
         <BookingTable />
       </Row>
-    </Row>
+    </>
   );
 }
 

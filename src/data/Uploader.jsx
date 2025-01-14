@@ -18,6 +18,7 @@ import { guests } from "./data-guests";
 async function deleteGuests() {
   const { error } = await supabase.from("guests").delete().gt("id", 0);
   if (error) console.log(error.message);
+  console.log("Deleted guests");
 }
 
 async function deleteCabins() {
@@ -120,7 +121,7 @@ function Uploader() {
 
   async function uploadBookings() {
     setIsLoading(true);
-    await deleteBookings();
+    // await deleteBookings();
     await createBookings();
     setIsLoading(false);
   }

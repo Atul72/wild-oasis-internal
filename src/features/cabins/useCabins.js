@@ -5,11 +5,13 @@ export const useCabins = () => {
   const {
     isLoading,
     data: cabins,
-    // error,
+    error,
   } = useQuery({
     queryKey: ["cabins"],
     queryFn: getCabins,
   });
+
+  if (error) throw new Error("Cabins could not get loaded");
 
   return { isLoading, cabins };
 };
